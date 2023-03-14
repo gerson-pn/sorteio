@@ -4,7 +4,7 @@ export default class Extrator {
         this.dadosBrutos = dadosBrutos
     }
     public extrair(): string[] {
-        let dadosSeparados = this.dadosBrutos.split(',')
+        let dadosSeparados = this.dadosBrutos.split('\r\n')
         return dadosSeparados
     }
 }
