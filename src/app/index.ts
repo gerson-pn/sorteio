@@ -1,4 +1,6 @@
 import Abridor from "../negocio/abridor";
+import EscritorCsv from "../negocio/escritorCsv";
+import EscritorJson from "../negocio/escritorJson";
 import Extrator from "../negocio/extrator";
 import Sorteador from "../negocio/sorteador";
 
@@ -13,6 +15,5 @@ let atributos = extratorAtributos.extrair()
 let sorteador = new Sorteador(categorias, atributos)
 let sorteados = sorteador.sortear()
 
-sorteados.forEach(sorteado => {
-    console.log(`indice: ${sorteados.indexOf(sorteado)}, atributo: ${sorteado.atributo}, categoria: ${sorteado.categoria}`);
-})
+let escritorCsv = new EscritorCsv('sorteio.csv', __dirname, sorteados)
+escritorCsv.escrever()
