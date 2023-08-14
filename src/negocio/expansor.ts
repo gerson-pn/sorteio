@@ -16,7 +16,7 @@ export default class Expansor {
     }
 
     public expandir(): Array<any> {
-        let listaMenorExpandidas: Array<any> = []
+        let listaMenorExpandida: Array<any> = []
         let tamanhoListaMaior = this.listaMaior.length
         let tamanhoListaMenor = this.listaMenor.length
         let diferencaTamanho = tamanhoListaMaior - tamanhoListaMenor
@@ -25,30 +25,30 @@ export default class Expansor {
         if (multiplicidade) {
             let quantidadeMaior = tamanhoListaMaior / tamanhoListaMenor
             for (let indice = 0; indice < quantidadeMaior; indice++) {
-                this.listaMenor.forEach(elemento => { listaMenorExpandidas.push(elemento) })
+                this.listaMenor.forEach(elemento => { listaMenorExpandida.push(elemento) })
             }
         } else {
-            this.listaMenor.forEach(elemento => { listaMenorExpandidas.push(elemento) })
+            this.listaMenor.forEach(elemento => { listaMenorExpandida.push(elemento) })
             if (diferencaTamanho <= tamanhoListaMenor) {
                 for (let indice = 0; indice < diferencaTamanho; indice++) {
-                    listaMenorExpandidas.push(this.listaMenor[indice])
+                    listaMenorExpandida.push(this.listaMenor[indice])
                 }
             } else {
                 while (diferencaTamanho > 0) {
                     if (diferencaTamanho > tamanhoListaMenor) {
                         for (let indice = 0; indice < tamanhoListaMenor; indice++) {
-                            listaMenorExpandidas.push(this.listaMenor[indice])
+                            listaMenorExpandida.push(this.listaMenor[indice])
                             diferencaTamanho = diferencaTamanho - 1
                         }
                     } else {
                         for (let indice = 0; indice < diferencaTamanho; indice++) {
-                            listaMenorExpandidas.push(this.listaMenor[indice])
+                            listaMenorExpandida.push(this.listaMenor[indice])
                             diferencaTamanho = diferencaTamanho - 1
                         }
                     }
                 }
             }
         }
-        return listaMenorExpandidas
+        return listaMenorExpandida
     }
 }
