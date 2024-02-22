@@ -9,7 +9,7 @@ export default class EscritorJson extends Escritor {
         this.lista.forEach(elemento => {
             let elementoJson = {
                 'indice': this.lista.indexOf(elemento),
-                'nome':elemento.atributo,
+                'nome': elemento.atributo,
                 'atividade': elemento.categoria
             }
             jsons.push(elementoJson)
