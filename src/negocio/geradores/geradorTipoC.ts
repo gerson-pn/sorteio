@@ -1,4 +1,4 @@
-import Dado from "../modelos/dado";
+import Dado from "../../modelos/dado";
 import Gerador from "./gerador";
 
 export default class GeradorTipoC extends Gerador {

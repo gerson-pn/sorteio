@@ -1,17 +1,10 @@
-import Dado from "../modelos/dado";
-import Expansor from "./expansor";
+import Dado from "../../modelos/dado";
 import Gerador from "./gerador";
 
-export default class GeradorTipoB extends Gerador {
-    private expansor: Expansor
-    constructor(categorias: Array<any>, atributos: Array<any>) {
-        super(categorias, atributos)
-        this.expansor = new Expansor(atributos, categorias)
-    }
-
+export default class GeradorTipoA extends Gerador {
     public gerar(): Dado[] {
         let dados: Array<Dado> = []
-        let categoriasEmbaralhadas = this.embaralhador.embaralhar(this.expansor.expandir())
+        let categoriasEmbaralhadas = this.embaralhador.embaralhar(this.categorias)
         let atributosEmbaralhados = this.embaralhador.embaralhar(this.atributos)
         categoriasEmbaralhadas.forEach(categoria => {
             let indice = categoriasEmbaralhadas.indexOf(categoria)
@@ -20,4 +13,5 @@ export default class GeradorTipoB extends Gerador {
         })
         return dados
     }
+
 }

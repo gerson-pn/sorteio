@@ -16,7 +16,7 @@ export default class Abridor {
     }
     public abrir(): string {
         let caminhoCompleto = path.join(this.obterCaminho(), this.nomeArquivo)
-        let arquivo = readFileSync(caminhoCompleto, 'ascii');
+        let arquivo = readFileSync(caminhoCompleto, 'utf-8');
         return arquivo
     }
 }

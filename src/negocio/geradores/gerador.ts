@@ -1,5 +1,5 @@
-import Dado from "../modelos/dado"
-import Embaralhador from "./embaralhador"
+import Dado from "../../modelos/dado"
+import Embaralhador from "../embaralhadores/embaralhador"
 
 export default abstract class Gerador{
     protected categorias: Array<any>

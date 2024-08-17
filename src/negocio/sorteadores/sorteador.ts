@@ -1,8 +1,8 @@
-import Dado from "../modelos/dado"
-import Gerador from "./gerador"
-import GeradorTipoA from "./geradorTipoA"
-import GeradorTipoB from "./geradorTipoB"
-import GeradorTipoC from "./geradorTipoC"
+import Dado from "../../modelos/dado"
+import Gerador from "../geradores/gerador"
+import GeradorTipoA from "../geradores/geradorTipoA"
+import GeradorTipoB from "../geradores/geradorTipoB"
+import GeradorTipoC from "../geradores/geradorTipoC"
 
 export default class Sorteador {
     private categorias: Array<any>

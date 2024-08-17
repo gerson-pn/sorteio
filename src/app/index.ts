@@ -1,8 +1,7 @@
-import Abridor from "../negocio/abridor";
-import EscritorCsv from "../negocio/escritorCsv";
-import EscritorJson from "../negocio/escritorJson";
-import Extrator from "../negocio/extrator";
-import Sorteador from "../negocio/sorteador";
+import Abridor from "../negocio/abridores/abridor";
+import EscritorCsv from "../negocio/escritores/escritorCsv";
+import Extrator from "../negocio/extratores/extrator";
+import Sorteador from "../negocio/sorteadores/sorteador";
 
 let abridorCategorias = new Abridor('categorias.csv', __dirname)
 let extratorCategorias = new Extrator(abridorCategorias.abrir())

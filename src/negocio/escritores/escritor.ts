@@ -1,4 +1,4 @@
-import Dado from "../modelos/dado"
+import Dado from "../../modelos/dado"
 
 export default abstract class Escritor {
     protected nomeArquivo: string
