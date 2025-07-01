@@ -2,7 +2,6 @@ export default class Embaralhador {
     public indiceAleatorio(lista: Array<any>): number {
         return Math.floor(Math.random() * lista.length)
     }
-
     public embaralhar(lista: Array<any>): Array<any> {
         let listaEmbaralhada = []
         while (lista.length > 0) {
